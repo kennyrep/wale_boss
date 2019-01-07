@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Ajayi_Ventures">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        android:background="#003366">
+
+
+
+        <ImageView
+            android:id="@+id/image1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="12dp"
+            android:src="@drawable/mark_dash1" />
+
+        <ImageView
+            android:id="@+id/back_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="43dp"
+            android:layout_marginBottom="12dp"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="37dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_toRightOf="@+id/back_arrow"
+            android:gravity="center"
+            android:text="Ajayi Ventures"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/image1"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="35dp"
+            android:layout_marginRight="45dp"
+            android:src="@drawable/notification" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/image1"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="-1dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/option" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="70dp"
+        android:text="Name of Employer"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:layout_width="33dp"
+        android:layout_height="16dp"
+        android:layout_alignRight="@id/name"
+        android:layout_marginTop="70dp"
+        android:layout_marginRight="-181dp"
+        android:src="@drawable/path7" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="94dp"
+        android:background="@drawable/rounded_edittext"
+        android:drawablePadding="20dp"
+        android:ems="10"
+        android:hint="Oilcon Services"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/address_employee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="142dp"
+        android:text="Address of Employer"
+        android:textStyle="bold" />
+
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="7dp"
+        android:layout_marginLeft="7dp"
+
+        android:layout_marginTop="165dp"
+        android:background="@drawable/rounded_edittext"
+        android:drawablePadding="20dp"
+        android:ems="10"
+        android:hint="10, Ajao Estate, Lagos"
+        android:inputType="textPersonName" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="216dp"
+        android:layout_marginEnd="126dp"
+        android:layout_marginRight="126dp"
+        android:src="@drawable/room" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="220dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        android:text="View Address On Map"
+        android:textColor="#003366"
+        android:textSize="10sp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/name_key"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="247dp"
+        android:text="Name of Key Contact Person"
+        android:textStyle="bold" />
+
+
+    <EditText
+        android:id="@+id/editText_name_key"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="270dp"
+        android:background="@drawable/rounded_edittext"
+        android:drawablePadding="20dp"
+        android:ems="10"
+        android:hint="Mr. Ajayi Bayo"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/name_position"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="317dp"
+        android:text="Position of Key Contact Person"
+        android:textStyle="bold" />
+
+
+    <EditText
+        android:id="@+id/editText_position"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="341dp"
+        android:background="@drawable/rounded_edittext"
+        android:drawablePadding="20dp"
+        android:ems="10"
+        android:hint="08180863862"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="389dp"
+        android:text="Category"
+        android:textStyle="bold" />
+
+
+    <EditText
+        android:id="@+id/editText_category"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="412dp"
+        android:background="@drawable/rounded_edittext"
+        android:drawablePadding="20dp"
+        android:ems="10"
+        android:hint="Financial Planning"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="463dp"
+        android:text="Date to be Visited"
+        android:textStyle="bold" />
+
+
+    <EditText
+        android:id="@+id/editText_phone"
+        android:layout_width="238dp"
+        android:layout_height="38dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="486dp"
+        android:background="@drawable/rounded_edittext"
+        android:drawablePadding="20dp"
+        android:ems="10"
+        android:hint="02/Dec/2017 - 2:00PM"
+        android:inputType="textPersonName" />
+
+    <ImageView
+        android:layout_width="42dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/editText_phone"
+        android:layout_alignRight="@id/editText_phone"
+        android:layout_marginTop="490dp"
+        android:layout_marginEnd="-46dp"
+        android:layout_marginRight="-46dp"
+        android:src="@drawable/calandar" />
+
+
+</RelativeLayout>
