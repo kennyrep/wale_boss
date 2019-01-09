@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Homepage">
-
+<!--TODO 1. This is nice work. However, you literally designed the toolbar/action bar manually which is good but not effective.
+    TODO Read here: https://developer.android.com/training/appbar/setting-up#java on how to do this.-->
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="50dp"

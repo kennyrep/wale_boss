@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Register">
-
+<!--Todo 4. Nice work. However, same issue as mentioned in Todo 2-->
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"

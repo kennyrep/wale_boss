@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/rectangle"
     tools:context=".Congratulations">
-
+<!--Todo 7. Nice work, But, No but here! Nice work here -->
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"

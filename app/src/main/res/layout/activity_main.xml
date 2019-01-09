@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
+<!--Todo 2. This is nice work. Well done. However, the drawable inside those EditText view are to close the edge. Find a way!-->
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"

@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".New_Prospect">
-
+<!--Todo 3. Same issue as Todo 1. You designed the toolbal manually.
+    And the margin on the left and right of the cardview is way too much.-->
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="50dp"
