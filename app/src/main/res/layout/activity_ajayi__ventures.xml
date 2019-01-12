@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Ajayi_Ventures">
+    tools:context=".AjayiVentures">
     <!--Todo 9. Same issue as Todo 1. You designed the toolbal manually.
     More to it, this is horrible. What are you gonna do with all the space to the right? Sleep there? Lol!
     And edit text background color tool is bad. The border should be dark while the inside should be white. Look at the design again-->
@@ -81,22 +81,24 @@
             android:text="Name of Employer"
             android:textStyle="bold" />
 
-        <ImageView
-            android:layout_width="33dp"
-            android:layout_height="16dp"
-            android:layout_alignRight="@id/name"
-            android:layout_marginTop="70dp"
-            android:layout_marginRight="-181dp"
-            android:src="@drawable/path7" />
+    <ImageView
+        android:layout_width="33dp"
+        android:layout_height="16dp"
+        android:layout_alignRight="@id/name"
+        android:layout_marginTop="70dp"
+        android:layout_marginRight="-241dp"
+        android:src="@drawable/path7" />
 
         <EditText
             android:id="@+id/editText"
-            android:layout_width="300dp"
+            android:layout_width="380dp"
             android:layout_height="40dp"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="94dp"
-            android:background="@drawable/rounded_edittext"
+            android:background="@drawable/shape"
             android:drawablePadding="20dp"
             android:ems="10"
             android:hint="Oilcon Services"
@@ -115,17 +117,13 @@
 
         <EditText
             android:id="@+id/editText2"
-            android:layout_width="300dp"
+            android:layout_width="380dp"
             android:layout_height="40dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="7dp"
-            android:layout_marginLeft="7dp"
-
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="165dp"
-            android:background="@drawable/rounded_edittext"
-            android:drawablePadding="20dp"
+            android:background="@drawable/shape"
             android:ems="10"
             android:hint="10, Ajao Estate, Lagos"
             android:inputType="textPersonName" />
@@ -169,13 +167,12 @@
 
         <EditText
             android:id="@+id/editText_name_key"
-            android:layout_width="300dp"
+            android:layout_width="380dp"
             android:layout_height="40dp"
-            android:layout_alignParentTop="true"
             android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:layout_marginTop="270dp"
-            android:background="@drawable/rounded_edittext"
-            android:drawablePadding="20dp"
+            android:background="@drawable/shape"
             android:ems="10"
             android:hint="Mr. Ajayi Bayo"
             android:inputType="textPersonName" />
@@ -193,13 +190,12 @@
 
         <EditText
             android:id="@+id/editText_position"
-            android:layout_width="300dp"
+            android:layout_width="380dp"
             android:layout_height="40dp"
-            android:layout_alignParentTop="true"
+            android:layout_marginRight="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="341dp"
-            android:background="@drawable/rounded_edittext"
-            android:drawablePadding="20dp"
+            android:background="@drawable/shape"
             android:ems="10"
             android:hint="08180863862"
             android:inputType="textPersonName" />
@@ -217,14 +213,14 @@
 
         <EditText
             android:id="@+id/editText_category"
-            android:layout_width="300dp"
+            android:layout_width="380dp"
             android:layout_height="40dp"
-            android:layout_alignParentTop="true"
             android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:layout_marginTop="412dp"
-            android:background="@drawable/rounded_edittext"
-            android:drawablePadding="20dp"
+            android:background="@drawable/shape"
             android:ems="10"
+            android:drawablePadding="20dp"
             android:hint="Financial Planning"
             android:inputType="textPersonName" />
 
@@ -239,28 +235,28 @@
             android:textStyle="bold" />
 
 
-        <EditText
-            android:id="@+id/editText_phone"
-            android:layout_width="238dp"
-            android:layout_height="38dp"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="486dp"
-            android:background="@drawable/rounded_edittext"
-            android:drawablePadding="20dp"
-            android:ems="10"
-            android:hint="02/Dec/2017 - 2:00PM"
-            android:inputType="textPersonName" />
+    <EditText
+        android:id="@+id/editText_phone"
+        android:layout_width="303dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="486dp"
+        android:background="@drawable/shape"
+        android:drawablePadding="20dp"
+        android:ems="10"
+        android:hint="02/Dec/2017 - 2:00PM"
+        android:inputType="textPersonName" />
 
-        <ImageView
-            android:layout_width="42dp"
-            android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/editText_phone"
-            android:layout_alignRight="@id/editText_phone"
-            android:layout_marginTop="490dp"
-            android:layout_marginEnd="-46dp"
-            android:layout_marginRight="-46dp"
-            android:src="@drawable/calandar" />
+    <ImageView
+        android:layout_width="42dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/editText_phone"
+        android:layout_alignRight="@id/editText_phone"
+        android:layout_marginTop="490dp"
+        android:layout_marginEnd="-49dp"
+        android:layout_marginRight="-49dp"
+        android:src="@drawable/calandar" />
 
 
     </RelativeLayout>

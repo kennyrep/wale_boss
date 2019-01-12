@@ -15,7 +15,7 @@ public class Visitor extends AppCompatActivity {
 
     public void check(View view) {
 
-        Intent check = new Intent(this, Visitor_Information.class);
+        Intent check = new Intent(this, VisitorInformation.class);
         startActivity(check);
     }
 }

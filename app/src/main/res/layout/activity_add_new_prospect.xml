@@ -81,26 +81,28 @@
             android:text="Name of Employer"
             android:textStyle="bold" />
 
-        <ImageView
-            android:layout_width="89dp"
-            android:layout_height="31dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_marginStart="281dp"
-            android:layout_marginLeft="281dp"
-            android:layout_marginTop="70dp"
-            android:layout_marginRight="-217dp"
-            android:paddingRight="10dp"
-            android:src="@drawable/path7" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="316dp"
+        android:layout_marginLeft="316dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginRight="-217dp"
+        android:paddingRight="10dp"
+        android:src="@drawable/path7" />
 
         <EditText
             android:id="@+id/editText"
-            android:layout_width="300dp"
+            android:layout_width="380dp"
             android:layout_height="40dp"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="99dp"
-            android:background="@drawable/rounded_edittext"
+            android:background="@drawable/shape"
             android:ems="10"
             android:inputType="textPersonName" />
 
@@ -117,12 +119,14 @@
 
         <EditText
             android:id="@+id/editText2"
-            android:layout_width="300dp"
+            android:layout_width="380dp"
             android:layout_height="40dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="168dp"
-            android:background="@drawable/rounded_edittext"
+            android:background="@drawable/shape"
             android:ems="10"
             android:inputType="textPersonName" />
 
@@ -165,12 +169,14 @@
 
         <EditText
             android:id="@+id/editText_name_key"
-            android:layout_width="300dp"
+            android:layout_width="380dp"
             android:layout_height="40dp"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="259dp"
-            android:background="@drawable/rounded_edittext"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/shape"
             android:ems="10"
             android:inputType="textPersonName" />
 
@@ -187,12 +193,14 @@
 
         <EditText
             android:id="@+id/editText_position"
-            android:layout_width="300dp"
+            android:layout_width="380dp"
             android:layout_height="40dp"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="337dp"
-            android:background="@drawable/rounded_edittext"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/shape"
             android:ems="10"
             android:inputType="textPersonName" />
 
@@ -209,12 +217,14 @@
 
         <EditText
             android:id="@+id/editText_category"
-            android:layout_width="300dp"
+            android:layout_width="380dp"
             android:layout_height="40dp"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="407dp"
-            android:background="@drawable/rounded_edittext"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/shape"
             android:ems="10"
             android:inputType="textPersonName" />
 
@@ -231,12 +241,14 @@
 
         <EditText
             android:id="@+id/editText_phone"
-            android:layout_width="300dp"
+            android:layout_width="380dp"
             android:layout_height="40dp"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="482dp"
-            android:background="@drawable/rounded_edittext"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/shape"
             android:ems="10"
             android:inputType="textPersonName" />
 

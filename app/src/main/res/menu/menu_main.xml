@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_favorite"
+        android:icon="@drawable/mark_dash1"
+        android:title="mark_dash"
+        app:showAsAction="always"
+        android:onClick="doThis"
+        android:orderInCategory="1"/>
+
+
+    <item
+        android:id="@+id/action_notification"
+        android:icon="@drawable/notification"
+        android:title="notification"
+        app:showAsAction="always"
+        android:onClick="notify"
+        android:orderInCategory="2"/>
+
+    <item
+        android:id="@+id/action_option"
+        android:icon="@drawable/option"
+        android:title="option"
+        android:onClick="option"
+        app:showAsAction="always"
+        android:orderInCategory="3"/>
+
+</menu>

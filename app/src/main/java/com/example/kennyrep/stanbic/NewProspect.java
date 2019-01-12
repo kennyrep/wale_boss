@@ -3,7 +3,7 @@ package com.example.kennyrep.stanbic;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class New_Prospect extends AppCompatActivity {
+public class NewProspect extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

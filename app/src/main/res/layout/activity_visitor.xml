@@ -72,7 +72,7 @@
     </RelativeLayout>
 
     <android.support.v7.widget.CardView
-        android:layout_width="310dp"
+        android:layout_width="380dp"
         android:layout_height="100dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"

@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-public class Call_Plan extends AppCompatActivity {
+public class CallPlan extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -14,7 +14,7 @@ public class Call_Plan extends AppCompatActivity {
     }
 
     public void ventures(View view) {
-        Intent ajayi = new Intent(this, Ajayi_Ventures.class);
+        Intent ajayi = new Intent(this, AjayiVentures.class);
         startActivity(ajayi);
     }
 }

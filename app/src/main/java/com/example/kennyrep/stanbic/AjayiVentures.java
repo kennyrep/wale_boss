@@ -6,7 +6,7 @@ import android.os.Bundle;
 
 //TODO 10. naming of classes in JAVA follows a convention called CamelCasing - capitalize the first letter of each word.
 // TODO This should be AjayiVentures and not Ajayi_Ventures. This same principle should apply to other Classes.
-public class Ajayi_Ventures extends AppCompatActivity {
+public class AjayiVentures extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
