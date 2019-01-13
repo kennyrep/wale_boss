@@ -7,7 +7,12 @@
     tools:context=".AjayiVentures">
     <!--Todo 9. Same issue as Todo 1. You designed the toolbal manually.
     More to it, this is horrible. What are you gonna do with all the space to the right? Sleep there? Lol!
-    And edit text background color tool is bad. The border should be dark while the inside should be white. Look at the design again-->
+    And edit text background color tool is bad. The border should be dark while the inside should be white. Look at the design again
+    -->
+    <!--TODO 1.1 You have resolved the second aspect but the toolbar is still an issue. Here is what you should try
+        Right click on the layout folder, select new -> select activity -> select Navigation drawer activity
+        Android studio will generate some files in the layout folder, study them and see how the toolbar is integrated.
+     -->
         <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="50dp"
