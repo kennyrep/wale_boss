@@ -2,6 +2,8 @@ package com.example.kennyrep.stanbic;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 
 
 public class AjayiVentures extends AppCompatActivity {
@@ -11,16 +13,38 @@ public class AjayiVentures extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ajayi__ventures);
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
 }
 //TODO 1.0 It now generally looks better but there are still issues predominantly on the toolbar/action, follow my comments in TODO 1.1.
 //TODO Also the video you get from Ola T will help solidify your design instincts.
 
 
 //TODO 2.0 For this week, our main focus is learning how users are ideally gonna use the app. The following comes to mind:
-//TODO User registration and login - how do we obtain what has been typed into those edit texts
+//TODO com.User registration and login - how do we obtain what has been typed into those edit texts
 //TODO Validating these input data, e.g is the email valid? checking that the user's name is not empty, etc
 //TODO Simulating a real flow by storing the information/input retrieved during registration to a database.
-//TODO User login against information saved during registration
+//TODO com.User login against information saved during registration
 // TODO Here we shall use a local database i.e a database on the phone to store those information
 // Todo You must have heard about SQLite before - its the local database we use on Android but its a bit difficult to grasp at first.
 //TODO So, an abstraction on top of it is called ROOM which you will use. The truth is, I have not used this ROOM before too, so, you are learning to teach me. It wont be easy but we can do it! so brace up to learn!

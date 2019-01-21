@@ -8,77 +8,16 @@
     <!--Todo 6. Same issue as Todo 1. You designed the toolbal manually.
     More to it, The left and right margin of the edit text here are too much. And the background color of the edit text just dont cut it. Not good.-->
 
-        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="0dp"
-            android:background="#003366">
-
-
-
-            <ImageView
-                android:id="@+id/image1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_marginLeft="10dp"
-                android:layout_marginBottom="12dp"
-                android:src="@drawable/mark_dash1" />
-
-            <ImageView
-                android:id="@+id/back_arrow"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_marginLeft="43dp"
-                android:layout_marginBottom="12dp"
-                android:src="@drawable/back" />
-
-            <TextView
-                android:id="@+id/title_text"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_alignParentTop="true"
-
-                android:layout_centerHorizontal="true"
-                android:gravity="center"
-                android:text="Visitor Information"
-                android:textColor="#fff"
-                android:textSize="20sp" />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignTop="@+id/image1"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_marginEnd="35dp"
-                android:layout_marginRight="45dp"
-                android:src="@drawable/notification" />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignTop="@+id/image1"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_marginTop="-1dp"
-                android:layout_marginEnd="5dp"
-                android:layout_marginRight="5dp"
-                android:src="@drawable/option" />
-        </RelativeLayout>
-
-        <TextView
-            android:id="@+id/address_employee"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="52dp"
-            android:fontFamily="sans-serif"
-            android:text="Subject"
-            android:textStyle="bold" />
+    <TextView
+        android:id="@+id/address_employee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="6dp"
+        android:fontFamily="sans-serif"
+        android:text="Subject"
+        android:textStyle="bold" />
 
         <android.support.v7.widget.CardView
             android:layout_width="380dp"
@@ -87,7 +26,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="70dp"
+            android:layout_marginTop="22dp"
             app:cardBackgroundColor="#F8F8F8"
             app:cardCornerRadius="7dp" >
 
@@ -173,99 +112,103 @@
             </RelativeLayout>
         </android.support.v7.widget.CardView>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="207dp"
-            android:fontFamily="sans-serif"
-            android:text="Body"
-            android:textStyle="bold" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="166dp"
+        android:fontFamily="sans-serif"
+        android:text="Body"
+        android:textStyle="bold" />
 
-        <EditText
-            android:id="@+id/editText_phone"
-            android:layout_width="380dp"
-            android:layout_height="60dp"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginRight="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="229dp"
-            android:drawablePadding="30dp"
-            android:background="@drawable/shape"
-            android:ems="10"
-            android:hint="Comment"
-            android:inputType="textPersonName" />
+    <EditText
+        android:id="@+id/editText_phone"
+        android:layout_width="380dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="186dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/shape"
+        android:drawablePadding="30dp"
+        android:ems="10"
+        android:hint="Comment"
+        android:inputType="textPersonName"
+        android:paddingStart="5dp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="295dp"
-            android:fontFamily="sans-serif"
-            android:text="Summary of Interaction"
-            android:textStyle="bold" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="261dp"
+        android:fontFamily="sans-serif"
+        android:text="Summary of Interaction"
+        android:textStyle="bold" />
 
-        <EditText
-            android:layout_width="380dp"
-            android:layout_height="40dp"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginRight="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="319dp"
-            android:background="@drawable/shape"
-            android:ems="10"
-            android:hint="RSA Sign Up"
-            android:inputType="textPersonName" />
+    <EditText
+        android:layout_width="380dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="279dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/shape"
+        android:ems="10"
+        android:hint="RSA Sign Up"
+        android:inputType="textPersonName"
+        android:paddingStart="5dp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="360dp"
-            android:fontFamily="sans-serif"
-            android:text="Fellow Up Plan"
-            android:textStyle="bold" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="332dp"
+        android:fontFamily="sans-serif"
+        android:text="Fellow Up Plan"
+        android:textStyle="bold" />
 
-        <EditText
-            android:layout_width="380dp"
-            android:layout_height="40dp"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="382dp"
-            android:background="@drawable/shape"
-            android:ems="10"
-            android:hint="Weekly Check Up"
-            android:inputType="textPersonName" />
+    <EditText
+        android:layout_width="380dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="352dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/shape"
+        android:ems="10"
+        android:hint="Weekly Check Up"
+        android:inputType="textPersonName"
+        android:paddingStart="5dp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="427dp"
-            android:fontFamily="sans-serif"
-            android:text="Pending Action Point"
-            android:textStyle="bold" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="402dp"
+        android:fontFamily="sans-serif"
+        android:text="Pending Action Point"
+        android:textStyle="bold" />
 
-        <EditText
-            android:layout_width="380dp"
-            android:layout_height="60dp"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginRight="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="449dp"
-            android:background="@drawable/shape"
-            android:ems="10"
-            android:hint="Comment"
-            android:inputType="textPersonName" />
+    <EditText
+        android:layout_width="380dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="421dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/shape"
+        android:ems="10"
+        android:hint="Comment"
+        android:inputType="textPersonName"
+        android:paddingStart="5dp" />
 
 
 

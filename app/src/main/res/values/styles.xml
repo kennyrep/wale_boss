@@ -16,5 +16,45 @@
 
     </style>
 
+    <style name="AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="NewProspectTheme.Base" parent="@style/Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/deepBlue</item>
+        <item name="colorPrimaryDark">@color/deepBlue</item>
+    </style>
+
+    <style name="NavDrawerThemme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/deepBlue</item>
+        <item name="colorPrimaryDark">@color/deepBlue</item>
+    </style>
+
+    <style name="CallPlanTheme" parent="@style/Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/deepBlue</item>
+        <item name="colorPrimaryDark">@color/deepBlue</item>
+    </style>
+
+    <style name="AddNewProspectTheme" parent="@style/Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/deepBlue</item>
+        <item name="colorPrimaryDark">@color/deepBlue</item>
+    </style>
+
+    <style name="AjayiVenturesTheme" parent="@style/Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/deepBlue</item>
+        <item name="colorPrimaryDark">@color/deepBlue</item>
+    </style>
+
+    <style name="VisitorTheme" parent="@style/Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/deepBlue</item>
+        <item name="colorPrimaryDark">@color/deepBlue</item>
+    </style>
+
+    <style name="VisitorInformationTheme" parent="@style/Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/deepBlue</item>
+        <item name="colorPrimaryDark">@color/deepBlue</item>
+    </style>
+
+
 
 </resources>

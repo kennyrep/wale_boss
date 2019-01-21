@@ -15,7 +15,7 @@ public class Congratulations extends AppCompatActivity {
 
     public void proceed(View view) {
 
-        Intent proced = new Intent(this, Homepage.class);
+        Intent proced = new Intent(this, NavDrawerActivity.class);
         startActivity(proced);
     }
 }
