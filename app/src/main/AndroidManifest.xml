@@ -25,56 +25,44 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".Register">
-            <intent-filter>
-                <action android:name=".Register" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-
         <activity
             android:name=".Homepage"
             android:label="@string/home" />
-
         <activity
             android:name=".NewProspect"
             android:label="New Prospect"
             android:parentActivityName=".NavDrawerActivity"
             android:theme="@style/NewProspectTheme.Base" />
-
         <activity
             android:name=".CallPlan"
             android:label="Call Plan"
             android:parentActivityName=".NavDrawerActivity"
             android:theme="@style/CallPlanTheme" />
-
         <activity
             android:name=".Visitor"
             android:label="Visitor"
             android:parentActivityName=".NavDrawerActivity"
-            android:theme="@style/VisitorTheme"/>
-
-        <activity android:name=".VisitorInformation"
+            android:theme="@style/VisitorTheme" />
+        <activity
+            android:name=".VisitorInformation"
             android:label="Visitor Information"
             android:parentActivityName=".Visitor"
-            android:theme="@style/VisitorInformationTheme"/>
-
+            android:theme="@style/VisitorInformationTheme" />
         <activity
             android:name=".AddNewProspect"
             android:label="Add New Prospect"
             android:parentActivityName=".NewProspect"
-            android:theme="@style/AddNewProspectTheme"/>
-
-        <activity android:name=".AjayiVentures"
+            android:theme="@style/AddNewProspectTheme" />
+        <activity
+            android:name=".AjayiVentures"
             android:label="Ajayi Ventures"
             android:parentActivityName=".CallPlan"
-            android:theme="@style/AjayiVenturesTheme"/>
-
+            android:theme="@style/AjayiVenturesTheme" />
         <activity
             android:name=".NavDrawerActivity"
             android:label="@string/home"
-            android:theme="@style/NavDrawerThemme"></activity>
+            android:theme="@style/NavDrawerThemme" />
+        <activity android:name=".Register"></activity>
     </application>
 
 </manifest>
