@@ -1,13 +1,11 @@
-package com;
+package com.example.kennyrep.stanbic.database;
 
-import android.arch.lifecycle.LiveData;
 import android.arch.persistence.room.Dao;
 import android.arch.persistence.room.Insert;
 import android.arch.persistence.room.Query;
-import android.arch.persistence.room.Update;
 
-import java.util.List;
 
+//Todo Nice work here
 @Dao
 public interface MyDao {
 
@@ -21,7 +19,6 @@ public interface MyDao {
     // Login page
     @Query("SELECT * FROM User WHERE Email=:email AND Password=:password")
     public User loadone(String email, String password);
-
 
 
 }

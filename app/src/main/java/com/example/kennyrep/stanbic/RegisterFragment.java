@@ -11,6 +11,8 @@ import android.view.ViewGroup;
 /**
  * A simple {@link Fragment} subclass.
  */
+
+//Todo What is this doing here?
 public class RegisterFragment extends Fragment {
 
 

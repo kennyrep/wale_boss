@@ -4,18 +4,18 @@ import android.arch.persistence.room.Room;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ScrollView;
 import android.widget.Toast;
 
-import com.MyAppDatabase;
-import com.User;
+import com.example.kennyrep.stanbic.database.MyAppDatabase;
+import com.example.kennyrep.stanbic.database.User;
 
 public class MainActivity extends AppCompatActivity {
 
+    //TODO Naming convention for variables should be PascalCasing, e.g full_name should be fullName
     private static Button btn_new;
     private static Button btn_dont;
 
@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //TODO Ensure there is a ScrollView in the layout and make sure it works
         setContentView(R.layout.activity_main);
         onClickListener();
 
@@ -41,12 +42,19 @@ public class MainActivity extends AppCompatActivity {
                     @Override
 
                     public void onClick(View view) {
+
                         email = emailEditText.getText().toString();
                         password = passwordEdittext.getText().toString();
+                        //TODO Ensure the email and password are provided before making attempt to login
+                        //something like below
+                        if(TextUtils.isEmpty(email)){
+                            emailEditText.setError("Email is required.");
+                        }
                         User user = myAppDatabase.myDao().loadone(email, password);
                         if (user == null){
                             Toast.makeText(MainActivity.this, "user not found", Toast.LENGTH_SHORT).show();
                         }else {
+
                             Intent i = new Intent(".congratulations");
                             startActivity(i);
                         }

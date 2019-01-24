@@ -1,16 +1,21 @@
-package com;
+package com.example.kennyrep.stanbic.database;
 
 import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
 import android.widget.EditText;
 
+
+//Todo Nice work here too.
+//Todo I refactored everything relating to database into a folder(otherwise called package) called database
 @Entity
 public class User {
 
     @PrimaryKey(autoGenerate = true)
     private int id;
 
+    //Todo There is a principle of atomicity in database design
+    //Todo Separate this into first name and last name and the same on the registration screen appropriately
     @ColumnInfo(name = "Full Name")
     private String fullName;
 

@@ -1,5 +1,7 @@
 package model;
 
+
+//Todo is this really useful here?
 public class NavDrawerItem {
 
     private boolean showNotify;

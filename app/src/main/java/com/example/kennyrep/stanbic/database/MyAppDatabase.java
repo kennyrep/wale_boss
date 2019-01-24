@@ -1,12 +1,8 @@
-package com;
+package com.example.kennyrep.stanbic.database;
 
-import android.arch.persistence.db.SupportSQLiteDatabase;
 import android.arch.persistence.room.Database;
-import android.arch.persistence.room.Room;
 import android.arch.persistence.room.RoomDatabase;
 import android.content.Context;
-import android.os.AsyncTask;
-import android.support.annotation.NonNull;
 
 @Database(entities = {User.class}, version = 1)
 public abstract class MyAppDatabase extends RoomDatabase {
@@ -27,9 +23,6 @@ public abstract class MyAppDatabase extends RoomDatabase {
         }
         return INSTANCE;
     }
-
-
-
 
 
 }

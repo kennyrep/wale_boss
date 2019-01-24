@@ -1,26 +1,26 @@
 package com.example.kennyrep.stanbic;
 
-import android.app.ActionBar;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.View;
-import android.view.ActionMode;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.widget.Toast;
-
-import com.example.kennyrep.stanbic.AddNewProspect;
-import com.example.kennyrep.stanbic.CallPlan;
-import com.example.kennyrep.stanbic.NewProspect;
-import com.example.kennyrep.stanbic.R;
-import com.example.kennyrep.stanbic.Visitor;
+import android.view.View;
 
 public class Homepage extends AppCompatActivity {
+
+
+
+    //TODO ****Task of the week***
+    //Todo Now that you have learnt how to save information in database, there is still more to it.
+    //Todo 0. During registration, also take the user job title, and a brief info about themselves
+    //Todo 1. Once a user registered and they login, do the following
+    //Todo 2. Display a list(RecyclerView) of the registered users (except the logged in user) with just their name and email
+    //Todo 3. When a user clicks on an item(a user) on the list, display more information of the user in another activity
+    //Todo 4. On the user detail page in 3, I should be able to edit(update) the user information or delete the user from the database
+    //Todo 5. A deleted user should be able to login again
+    //Todo 6. On the navigation drawer, display the name and email of the logged in user
 
     private Toolbar mToolbar;
 
@@ -57,10 +57,6 @@ public class Homepage extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
-
-
-
 
 
     public void newProspect(View view) {
