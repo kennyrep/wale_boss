@@ -55,6 +55,11 @@
         <item name="colorPrimaryDark">@color/deepBlue</item>
     </style>
 
+    <style name="ShowUserTheme" parent="@style/Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/deepBlue</item>
+        <item name="colorPrimaryDark">@color/deepBlue</item>
+    </style>
+
 
 
 </resources>

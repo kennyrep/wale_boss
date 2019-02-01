@@ -30,11 +30,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         onClickListener();
 
+
         myAppDatabase = Room.databaseBuilder(getApplicationContext(), MyAppDatabase.class, "userdb").allowMainThreadQueries().build();
     }
 
     public void onClickListener() {
-        btn_new = (Button) findViewById(R.id.buttonsign);
+        btn_new = findViewById(R.id.buttonsign);
         final EditText emailEditText = findViewById(R.id.email);
         final EditText passwordEdittext = findViewById(R.id.password);
         btn_new.setOnClickListener(
@@ -47,18 +48,29 @@ public class MainActivity extends AppCompatActivity {
                         password = passwordEdittext.getText().toString();
                         //TODO Ensure the email and password are provided before making attempt to login
                         //something like below
-                        if(TextUtils.isEmpty(email)){
+                        if (TextUtils.isEmpty(email)) {
                             emailEditText.setError("Email is required.");
+                            emailEditText.requestFocus();
+                            Toast.makeText(MainActivity.this, "Email Field must be Filled", Toast.LENGTH_SHORT).show();
+                            return;
                         }
+
+                        if (TextUtils.isEmpty(password)) {
+                            passwordEdittext.setError("Password is required.");
+                            passwordEdittext.requestFocus();
+                            Toast.makeText(MainActivity.this, "Password Field must be Filled", Toast.LENGTH_SHORT).show();
+                            return;
+                        }
+
+
                         User user = myAppDatabase.myDao().loadone(email, password);
-                        if (user == null){
+                        if (user == null) {
                             Toast.makeText(MainActivity.this, "user not found", Toast.LENGTH_SHORT).show();
-                        }else {
+                        } else {
 
                             Intent i = new Intent(".congratulations");
                             startActivity(i);
                         }
-
                     }
                 }
         );

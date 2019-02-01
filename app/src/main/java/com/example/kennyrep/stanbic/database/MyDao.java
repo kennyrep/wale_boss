@@ -4,6 +4,8 @@ import android.arch.persistence.room.Dao;
 import android.arch.persistence.room.Insert;
 import android.arch.persistence.room.Query;
 
+import java.util.List;
+
 
 //Todo Nice work here
 @Dao
@@ -14,7 +16,8 @@ public interface MyDao {
 
     //Returning the number of user in the database via a Toast message
     @Query("SELECT * FROM User")
-    public User[] load();
+    //public User[] load();
+    List<User> getAllUsers();
 
     // Login page
     @Query("SELECT * FROM User WHERE Email=:email AND Password=:password")
