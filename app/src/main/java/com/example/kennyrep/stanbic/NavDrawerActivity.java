@@ -13,10 +13,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 public class NavDrawerActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+    TextView name2;
+    TextView email2;
+    View hview;
 
+    //MainActivity mymainactivity = new MainActivity();
 
     //Todo Nice work here. Well done!
     @Override
@@ -26,12 +31,15 @@ public class NavDrawerActivity extends AppCompatActivity
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        name2 = findViewById(R.id.username);
+        email2 = findViewById(R.id.useremail);
+
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-              Intent intent = new Intent(NavDrawerActivity.this, ShowUser.class);
-              startActivity(intent);
+                Intent intent = new Intent(NavDrawerActivity.this, ShowUser.class);
+                startActivity(intent);
             }
         });
 
@@ -42,6 +50,12 @@ public class NavDrawerActivity extends AppCompatActivity
         toggle.syncState();
 
         NavigationView navigationView = findViewById(R.id.nav_view);
+        hview = navigationView.getHeaderView(0);
+        name2 = (TextView)hview.findViewById(R.id.username);
+        email2 = (TextView)hview.findViewById(R.id.useremail);
+
+        email2.setText(MainActivity.email);
+        name2.setText(Register.FirstName + " " + Register.LastName);
         navigationView.setNavigationItemSelectedListener(this);
     }
 
@@ -101,7 +115,6 @@ public class NavDrawerActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-
 
 
     public void newProspect(View view) {

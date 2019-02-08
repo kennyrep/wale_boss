@@ -2,11 +2,11 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "10f72aa7f8f481df2edeeef7ad30979b",
+    "identityHash": "ebd7a4c186c7d4c7e45cbf3b864c7f74",
     "entities": [
       {
         "tableName": "User",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `Full Name` TEXT, `Email` TEXT, `Password` TEXT, `Phone Number` TEXT)",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `First Name` TEXT, `Last Name` TEXT, `Email` TEXT, `Job Title` TEXT, `Password` TEXT, `Phone Number` TEXT)",
         "fields": [
           {
             "fieldPath": "id",
@@ -15,14 +15,26 @@
             "notNull": true
           },
           {
-            "fieldPath": "fullName",
-            "columnName": "Full Name",
+            "fieldPath": "firstName",
+            "columnName": "First Name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "lastName",
+            "columnName": "Last Name",
             "affinity": "TEXT",
             "notNull": false
           },
           {
             "fieldPath": "email",
             "columnName": "Email",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "jobTitle",
+            "columnName": "Job Title",
             "affinity": "TEXT",
             "notNull": false
           },
@@ -51,7 +63,7 @@
     ],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"10f72aa7f8f481df2edeeef7ad30979b\")"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"ebd7a4c186c7d4c7e45cbf3b864c7f74\")"
     ]
   }
 }

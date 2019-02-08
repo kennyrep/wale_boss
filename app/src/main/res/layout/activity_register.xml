@@ -78,69 +78,66 @@
             android:textSize="13sp" />
 
         <EditText
-            android:id="@+id/name"
-            android:layout_width="300dp"
-            android:layout_height="50dp"
+            android:id="@+id/firstname"
+            style="@style/EditTextStyle"
             android:layout_below="@id/textView2"
-            android:layout_centerHorizontal="true"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="25dp"
-            android:layout_marginRight="10dp"
-            android:background="@android:color/white"
             android:drawableLeft="@drawable/person"
             android:drawablePadding="10dp"
-            android:ems="10"
-            android:hint="Full Name"
+            android:layout_marginTop="30dp"
+            android:hint="First Name"
+            android:inputType="textPersonName"
+            android:paddingStart="10dp" />
+
+        <EditText
+            android:id="@+id/name"
+            style="@style/EditTextStyle"
+            android:layout_below="@id/firstname"
+            android:layout_marginTop="5dp"
+            android:drawableLeft="@drawable/person"
+            android:drawablePadding="10dp"
+            android:hint="Last Name"
             android:inputType="textPersonName"
             android:paddingStart="10dp" />
 
         <EditText
             android:id="@+id/email"
-            android:layout_width="300dp"
-            android:layout_height="50dp"
+            style="@style/EditTextStyle"
             android:layout_below="@id/name"
-            android:layout_centerHorizontal="true"
-            android:layout_marginLeft="10dp"
             android:layout_marginTop="5dp"
-            android:layout_marginRight="10dp"
-            android:background="@android:color/white"
             android:drawableLeft="@drawable/email3"
             android:drawablePadding="3dp"
-            android:ems="10"
             android:hint="Email Address"
+            android:inputType="textEmailAddress"
+            android:paddingStart="3dp" />
+        <EditText
+            android:id="@+id/job"
+            style="@style/EditTextStyle"
+            android:layout_below="@id/email"
+            android:layout_marginTop="5dp"
+            android:drawableLeft="@drawable/email3"
+            android:drawablePadding="3dp"
+            android:hint="Job Title"
             android:inputType="textEmailAddress"
             android:paddingStart="3dp" />
 
         <EditText
             android:id="@+id/phone"
-            android:layout_width="300dp"
-            android:layout_height="50dp"
-            android:layout_below="@+id/email"
-            android:layout_centerHorizontal="true"
-            android:layout_marginLeft="10dp"
+            style="@style/EditTextStyle"
+            android:layout_below="@+id/job"
             android:layout_marginTop="5dp"
-            android:layout_marginRight="10dp"
-            android:background="@android:color/white"
             android:drawableLeft="@drawable/call2"
             android:drawablePadding="3dp"
-            android:ems="10"
             android:hint="Phone No"
             android:inputType="phone"
             android:paddingStart="3dp" />
 
         <EditText
             android:id="@+id/password"
-            android:layout_width="300dp"
-            android:layout_height="50dp"
+            style="@style/EditTextStyle"
             android:layout_below="@+id/phone"
-            android:layout_centerHorizontal="true"
-            android:layout_marginLeft="10dp"
             android:layout_marginTop="5dp"
-            android:layout_marginRight="10dp"
-            android:background="@android:color/white"
             android:drawableLeft="@drawable/lock"
             android:drawablePadding="10dp"
-            android:ems="10"
             android:hint="Password"
             android:inputType="textPassword"
             android:paddingStart="10dp" />
@@ -158,7 +155,7 @@
         <Button
             android:id="@+id/buttonsign"
             android:layout_width="290dp"
-            android:layout_height="55dp"
+            android:layout_height="40dp"
             android:layout_below="@+id/accept"
             android:layout_centerHorizontal="true"
             android:layout_marginLeft="15dp"
@@ -173,9 +170,9 @@
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/buttonsign"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="12dp"
-            android:layout_below="@id/buttonsign">
+            android:layout_marginTop="5dp">
 
             <TextView
                 android:id="@+id/textView3"

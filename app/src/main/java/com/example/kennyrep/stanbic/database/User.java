@@ -10,8 +10,10 @@ import android.support.annotation.NonNull;
 //Todo I refactored everything relating to database into a folder(otherwise called package) called database
 @Entity
 public class User {
-    public User(String fullName, String email, String password, String phoneNumber) {
-        this.fullName = fullName;
+    public User(String firstName, String lastName, String jobTitle, String email, String password, String phoneNumber) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.jobTitle = jobTitle;
         this.email = email;
         this.password = password;
         this.phoneNumber = phoneNumber;
@@ -26,11 +28,17 @@ public class User {
     @PrimaryKey (autoGenerate = true)
     private int id;
 
-    @ColumnInfo(name = "Full Name")
-    private String fullName;
+    @ColumnInfo(name = "First Name")
+    private String firstName;
+
+    @ColumnInfo(name = "Last Name")
+    private String lastName;
 
     @ColumnInfo(name = "Email")
     private String email;
+
+    @ColumnInfo(name = "Job Title")
+    private String jobTitle;
 
     @ColumnInfo(name = "Password")
     private String password;
@@ -47,13 +55,28 @@ public class User {
         this.id = id;
     }
 
-    public String getFullName() {
-
-        return fullName;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getJobTitle() {
+        return jobTitle;
+    }
+
+    public void setJobTitle(String jobTitle) {
+        this.jobTitle = jobTitle;
     }
 
     public String getEmail() {

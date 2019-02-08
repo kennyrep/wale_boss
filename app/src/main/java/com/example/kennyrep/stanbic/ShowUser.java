@@ -11,6 +11,9 @@ import android.support.v7.widget.Toolbar;
 import android.content.Intent;
 import com.example.kennyrep.stanbic.database.MyAppDatabase;
 import com.example.kennyrep.stanbic.database.User;
+import android.support.design.widget.FloatingActionButton;
+import android.support.v7.app.ActionBarDrawerToggle;
+import android.view.View;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,19 +29,21 @@ public static MyAppDatabase myAppDatabase;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_user);
-        
+
+        FloatingActionButton fab1 = findViewById(R.id.fab);
+        fab1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ShowUser.this, Homepage.class);
+                startActivity(intent);
+            }
+        });
 
         recyclerView = findViewById(R.id.recyclerview);
-//        users = new ArrayList<>();
-//        for (int i = 0; i < 100 ; i++) {
-//            User user = new User("Audu Kehinde", "kenny12@gmail.com", "bethebest", "08134257687");
-//            users.add(user);
-//        }
-
         MyAppDatabase db = Room.databaseBuilder(getApplicationContext(), MyAppDatabase.class, "userdb")
                 .allowMainThreadQueries()
                 .build();
-       
+
 
         List<User> users = db.myDao().getAllUsers();
         recyclerView.setLayoutManager(new LinearLayoutManager(this));

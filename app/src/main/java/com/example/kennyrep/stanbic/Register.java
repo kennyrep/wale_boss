@@ -38,8 +38,10 @@ public class Register extends AppCompatActivity {
     public static MyAppDatabase myAppDatabase;
 
     //TODO Naming convention for variables should be PascalCasing, e.g full_name should be fullName
-    private EditText fullName, email, phoneNo, password;
+    public static EditText firstName, lastName, jobTitle, email, phoneNo, password;
     private Button register;
+    public static String FirstName;
+    public static String LastName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,7 +61,9 @@ public class Register extends AppCompatActivity {
 
     public void onCreateView() {
 
-        fullName = findViewById(R.id.name);
+        firstName = findViewById(R.id.firstname);
+        lastName= findViewById(R.id.name);
+        jobTitle = findViewById(R.id.job);
         email = findViewById(R.id.email);
         phoneNo = findViewById(R.id.phone);
         password = findViewById(R.id.password);
@@ -68,8 +72,10 @@ public class Register extends AppCompatActivity {
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String Full_name = fullName.getText().toString();
-                String Phone_no = (phoneNo.getText().toString());
+                FirstName = firstName.getText().toString();
+                LastName = lastName.getText().toString();
+                String JobTitle = jobTitle.getText().toString();
+                String PhoneNo = (phoneNo.getText().toString());
                 String Password = password.getText().toString();
                 String validEmail  =
                         "[a-zA-Z0-9\\+\\.\\_\\%\\-\\+]{1,256}" +
@@ -83,16 +89,18 @@ public class Register extends AppCompatActivity {
                 Matcher matcher = Pattern.compile(validEmail).matcher(Email);
 
                 User user = new User();
-                user.setFullName(Full_name);
+                user.setFirstName(FirstName);
+                user.setLastName(LastName);
+                user.setJobTitle(JobTitle);
                 user.setEmail(Email);
-                user.setPhoneNumber(Phone_no);
+                user.setPhoneNumber(PhoneNo);
                 user.setPassword(Password);
 
 
 
-                if (TextUtils.isEmpty(Full_name)) {
-                    fullName.setError("Full Name is required.");
-                    fullName.requestFocus();
+                if (TextUtils.isEmpty(FirstName)) {
+                    firstName.setError("Full Name is required.");
+                    firstName.requestFocus();
                     Toast.makeText(Register.this, "Name Field must be Filled", Toast.LENGTH_SHORT).show();
                     return;
                 }
@@ -108,7 +116,7 @@ public class Register extends AppCompatActivity {
                     return;
                 }
 
-                if (TextUtils.isEmpty(Phone_no)) {
+                if (TextUtils.isEmpty(PhoneNo)) {
                     phoneNo.setError("Phone Number is required.");
                     phoneNo.requestFocus();
                     Toast.makeText(Register.this, "Phone Number Field must be Filled", Toast.LENGTH_SHORT).show();
@@ -148,7 +156,9 @@ public class Register extends AppCompatActivity {
                 openDialog();
 
 
-                fullName.setText("");
+                firstName.setText("");
+                lastName.setText("");
+                jobTitle.setText("");
                 email.setText("");
                 phoneNo.setText("");
                 password.setText("");

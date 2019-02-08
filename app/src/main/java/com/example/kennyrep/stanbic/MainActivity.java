@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
     public static MyAppDatabase myAppDatabase;
 
-    private String email, password;
+    public static String email, password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,9 +71,15 @@ public class MainActivity extends AppCompatActivity {
                             Intent i = new Intent(".congratulations");
                             startActivity(i);
                         }
+                        emailEditText.setText("");
+                        passwordEdittext.setText("");
+
                     }
+
                 }
+
         );
+
     }
 
     public void signup(View view) {
