@@ -19,7 +19,10 @@ import com.example.kennyrep.stanbic.database.User;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+
 public class Register extends AppCompatActivity {
+    Intent i;
+    User user;
 
     private static final Pattern PASSWORD_PATTERN =
             Pattern.compile("^" +
@@ -31,8 +34,6 @@ public class Register extends AppCompatActivity {
                     "(?=\\S+$)" +           //no white spaces
                     ".{7,}" +               //at least 4 characters
                     "$");
-
-
 
 
     public static MyAppDatabase myAppDatabase;
@@ -52,17 +53,35 @@ public class Register extends AppCompatActivity {
                 .allowMainThreadQueries()
                 .build();
         onCreateView();
+        i = getIntent();
+        if (i != null) {
+            if (i.hasExtra("user")) {
+                user = i.getParcelableExtra("user");
+                setUpFields();
+            }
+        }
+
 
         //Showing the number user in the database in a Toast message
-       // User[] u = myAppDatabase.myDao().load();
+        // User[] u = myAppDatabase.myDao().load();
         //Toast.makeText(this, String.valueOf(u.length), Toast.LENGTH_SHORT).show();
+    }
+
+    private void setUpFields() {
+        firstName.setText(user.getFirstName());
+        lastName.setText(user.getLastName());
+        jobTitle.setText(user.getJobTitle());
+        email.setText(user.getEmail());
+        phoneNo.setText(user.getPhoneNumber());
+        password.setText(user.getPassword());
+
     }
 
 
     public void onCreateView() {
 
         firstName = findViewById(R.id.firstname);
-        lastName= findViewById(R.id.name);
+        lastName = findViewById(R.id.name);
         jobTitle = findViewById(R.id.job);
         email = findViewById(R.id.email);
         phoneNo = findViewById(R.id.phone);
@@ -77,7 +96,7 @@ public class Register extends AppCompatActivity {
                 String JobTitle = jobTitle.getText().toString();
                 String PhoneNo = (phoneNo.getText().toString());
                 String Password = password.getText().toString();
-                String validEmail  =
+                String validEmail =
                         "[a-zA-Z0-9\\+\\.\\_\\%\\-\\+]{1,256}" +
                                 "\\@" +
                                 "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,64}" +
@@ -97,7 +116,6 @@ public class Register extends AppCompatActivity {
                 user.setPassword(Password);
 
 
-
                 if (TextUtils.isEmpty(FirstName)) {
                     firstName.setError("Full Name is required.");
                     firstName.requestFocus();
@@ -110,8 +128,7 @@ public class Register extends AppCompatActivity {
                     email.requestFocus();
                     Toast.makeText(Register.this, "Email Field must be Filled", Toast.LENGTH_SHORT).show();
                     return;
-                }
-                else if (!matcher.matches()) {
+                } else if (!matcher.matches()) {
                     email.setError("Enter a Valid Email");
                     return;
                 }
@@ -121,8 +138,7 @@ public class Register extends AppCompatActivity {
                     phoneNo.requestFocus();
                     Toast.makeText(Register.this, "Phone Number Field must be Filled", Toast.LENGTH_SHORT).show();
                     return;
-                }
-                else if(phoneNo.length() != 11){
+                } else if (phoneNo.length() != 11) {
                     phoneNo.setError("Phone Number must be 11 Characters.");
                     phoneNo.requestFocus();
                     return;
@@ -132,8 +148,7 @@ public class Register extends AppCompatActivity {
                     password.requestFocus();
                     Toast.makeText(Register.this, "Password Field must be Filled", Toast.LENGTH_SHORT).show();
                     return;
-                }
-                else if (!PASSWORD_PATTERN.matcher(Password).matches()) {
+                } else if (!PASSWORD_PATTERN.matcher(Password).matches()) {
                     password.setError("Password too weak");
                     return;
                 }
@@ -168,9 +183,9 @@ public class Register extends AppCompatActivity {
 
     }
 
-    public void openDialog(){
+    public void openDialog() {
         ShowDialog showDialog = new ShowDialog();
-        showDialog.show(getSupportFragmentManager(),"Dialog");
+        showDialog.show(getSupportFragmentManager(), "Dialog");
 
     }
 

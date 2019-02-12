@@ -15,6 +15,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import com.example.kennyrep.stanbic.database.User;
+
+import static com.example.kennyrep.stanbic.Register.FirstName;
+import static com.example.kennyrep.stanbic.Register.LastName;
+import static com.example.kennyrep.stanbic.Register.firstName;
+import static com.example.kennyrep.stanbic.Register.myAppDatabase;
+
 public class NavDrawerActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     TextView name2;
@@ -31,17 +38,20 @@ public class NavDrawerActivity extends AppCompatActivity
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+
+
+
         name2 = findViewById(R.id.username);
         email2 = findViewById(R.id.useremail);
 
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(NavDrawerActivity.this, ShowUser.class);
-                startActivity(intent);
-            }
-        });
+//        FloatingActionButton fab = findViewById(R.id.fab);
+//        fab.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(NavDrawerActivity.this, ShowUser.class);
+//                startActivity(intent);
+//            }
+//        });
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -54,8 +64,9 @@ public class NavDrawerActivity extends AppCompatActivity
         name2 = (TextView)hview.findViewById(R.id.username);
         email2 = (TextView)hview.findViewById(R.id.useremail);
 
-        email2.setText(MainActivity.email);
+
         name2.setText(Register.FirstName + " " + Register.LastName);
+        email2.setText(MainActivity.email);
         navigationView.setNavigationItemSelectedListener(this);
     }
 
@@ -99,15 +110,21 @@ public class NavDrawerActivity extends AppCompatActivity
 
         if (id == R.id.nav_camera) {
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        }
+        else if
+                (id == R.id.nav_gallery) {
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if
+                (id == R.id.nav_slideshow) {
 
-        } else if (id == R.id.nav_manage) {
+        } else if
+                (id == R.id.nav_manage) {
 
-        } else if (id == R.id.nav_share) {
+        } else if
+                (id == R.id.nav_share) {
 
-        } else if (id == R.id.nav_send) {
+        } else if
+                (id == R.id.nav_send) {
 
         }
 
@@ -141,4 +158,23 @@ public class NavDrawerActivity extends AppCompatActivity
     }
 
 
+    public void homepage(MenuItem item) {
+        Intent intent = new Intent(this, NavDrawerActivity.class);
+        startActivity(intent);
+    }
+
+    public void newProspect(MenuItem item) {
+        Intent intent = new Intent(this, NewProspect.class);
+        startActivity(intent);
+    }
+
+    public void callPlan(MenuItem item) {
+        Intent intent = new Intent(this, CallPlan.class);
+        startActivity(intent);
+    }
+
+    public void visitReport(MenuItem item) {
+        Intent intent = new Intent(this, VisitorInformation.class);
+        startActivity(intent);
+    }
 }

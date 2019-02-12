@@ -7,19 +7,23 @@
         <item
             android:id="@+id/nav_camera"
             android:icon="@drawable/home"
-            android:title="Homepage" />
+            android:title="Homepage"
+            android:onClick="homepage"/>
         <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/newpro"
-            android:title="New Prospect" />
+            android:title="New Prospect"
+            android:onClick="newProspect"/>
         <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/call"
-            android:title="Call Plan" />
+            android:title="Call Plan"
+            android:onClick="callPlan"/>
         <item
             android:id="@+id/nav_manage"
             android:icon="@drawable/visit"
-            android:title="Visit Report" />
+            android:title="Visit Report"
+            android:onClick="visitReport"/>
     </group>
 
     <item android:title="Communicate">

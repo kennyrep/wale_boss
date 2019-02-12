@@ -2,12 +2,14 @@
 
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/usercard"
     android:layout_width="match_parent"
-    android:layout_height="100dp"
+    android:layout_height="wrap_content"
     android:layout_alignParentTop="true"
     card_view:cardCornerRadius="6dp"
     android:layout_margin="5dp"
-    android:background="#F8F8F8">
+    android:background="#F8F8F8"
+    card_view:cardBackgroundColor="@android:color/darker_gray">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -20,7 +22,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_marginLeft="10dp"
-            android:textSize="24sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/email"
@@ -30,7 +32,7 @@
             android:layout_alignParentLeft="true"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="5dp"
-            android:textSize="24sp" />
+            android:textSize="15sp" />
     </RelativeLayout>
 </android.support.v7.widget.CardView>
 

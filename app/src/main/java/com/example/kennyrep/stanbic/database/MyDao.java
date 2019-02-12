@@ -3,8 +3,12 @@ package com.example.kennyrep.stanbic.database;
 import android.arch.persistence.room.Dao;
 import android.arch.persistence.room.Insert;
 import android.arch.persistence.room.Query;
+import android.arch.persistence.room.Update;
 
 import java.util.List;
+
+import static com.example.kennyrep.stanbic.Register.firstName;
+import static com.example.kennyrep.stanbic.Register.lastName;
 
 
 //Todo Nice work here
@@ -23,5 +27,24 @@ public interface MyDao {
     @Query("SELECT * FROM User WHERE Email=:email AND Password=:password")
     public User loadone(String email, String password);
 
+    @Query("SELECT * FROM User WHERE id=:id")
+    public User getAUser(int id);
+
+    @Query("DELETE FROM User WHERE id=:id")
+    public int deleteAUser(int id);
+
+    @Update
+    public int update(User user);
+
+//    @Query("SELECT * FROM User WHERE firstName=:firstName AND lastName=:lastName")
+//    public User getName(int id);
 
 }
+
+
+
+
+
+
+
+
