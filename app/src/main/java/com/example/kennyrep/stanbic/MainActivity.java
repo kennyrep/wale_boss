@@ -2,6 +2,8 @@ package com.example.kennyrep.stanbic;
 
 import android.arch.persistence.room.Room;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -67,7 +69,10 @@ public class MainActivity extends AppCompatActivity {
                         if (user == null) {
                             Toast.makeText(MainActivity.this, "user not found", Toast.LENGTH_SHORT).show();
                         } else {
-
+                            SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
+                            SharedPreferences.Editor editor = preferences.edit();
+                            editor.putString("current", user.getEmail());
+                            editor.apply();
                             Intent i = new Intent(".congratulations");
                             startActivity(i);
                         }

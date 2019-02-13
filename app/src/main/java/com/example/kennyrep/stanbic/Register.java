@@ -2,6 +2,8 @@ package com.example.kennyrep.stanbic;
 
 import android.arch.persistence.room.Room;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -43,6 +45,7 @@ public class Register extends AppCompatActivity {
     private Button register;
     public static String FirstName;
     public static String LastName;
+    public static String currentUserEmail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -167,7 +170,11 @@ public class Register extends AppCompatActivity {
                 //Todo Dont allow registration until and unless user accept terms and conditions
                 //Todo Display a dialog instead of toast after successful registration and take the user back to login screen automatically
 
-                Register.myAppDatabase.myDao().addUser(user);
+                SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(Register.this);
+                SharedPreferences.Editor editor = preferences.edit();
+                editor.putString("current", user.getEmail());
+                editor.apply();
+                myAppDatabase.myDao().addUser(user);
                 openDialog();
 
 

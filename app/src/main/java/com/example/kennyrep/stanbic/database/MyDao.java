@@ -27,6 +27,9 @@ public interface MyDao {
     @Query("SELECT * FROM User WHERE Email=:email AND Password=:password")
     public User loadone(String email, String password);
 
+    @Query("SELECT * FROM User WHERE Email=:email")
+    public User loadonewithmail(String email);
+
     @Query("SELECT * FROM User WHERE id=:id")
     public User getAUser(int id);
 
@@ -36,8 +39,6 @@ public interface MyDao {
     @Update
     public int update(User user);
 
-//    @Query("SELECT * FROM User WHERE firstName=:firstName AND lastName=:lastName")
-//    public User getName(int id);
 
 }
 

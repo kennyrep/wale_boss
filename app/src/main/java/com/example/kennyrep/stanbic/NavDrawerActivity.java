@@ -1,7 +1,10 @@
 package com.example.kennyrep.stanbic;
 
+import android.arch.persistence.room.Room;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.view.View;
@@ -15,6 +18,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import com.example.kennyrep.stanbic.database.MyAppDatabase;
 import com.example.kennyrep.stanbic.database.User;
 
 import static com.example.kennyrep.stanbic.Register.FirstName;
@@ -27,7 +31,8 @@ public class NavDrawerActivity extends AppCompatActivity
     TextView name2;
     TextView email2;
     View hview;
-
+    SharedPreferences preferences;
+    MyAppDatabase db;
     //MainActivity mymainactivity = new MainActivity();
 
     //Todo Nice work here. Well done!
@@ -37,8 +42,13 @@ public class NavDrawerActivity extends AppCompatActivity
         setContentView(R.layout.activity_nav_drawer);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        preferences = PreferenceManager.getDefaultSharedPreferences(this);
 
+        db = Room.databaseBuilder(getApplicationContext(), MyAppDatabase.class, "userdb")
+                .allowMainThreadQueries()
+                .build();
 
+        // User users = db.myDao().getAUser(id);
 
 
         name2 = findViewById(R.id.username);
@@ -61,12 +71,18 @@ public class NavDrawerActivity extends AppCompatActivity
 
         NavigationView navigationView = findViewById(R.id.nav_view);
         hview = navigationView.getHeaderView(0);
-        name2 = (TextView)hview.findViewById(R.id.username);
-        email2 = (TextView)hview.findViewById(R.id.useremail);
+        name2 = (TextView) hview.findViewById(R.id.username);
+        email2 = (TextView) hview.findViewById(R.id.useremail);
 
-
-        name2.setText(Register.FirstName + " " + Register.LastName);
-        email2.setText(MainActivity.email);
+        if (preferences.contains("current")) {
+            String email = preferences.getString("current", "");
+            User user = db.myDao().loadonewithmail(email);
+            if (user != null) {
+                name2.setText(user.getFirstName() + " " + user.getLastName());
+                email2.setText(user.getEmail());
+            } else {
+                finish();
+            }        }
         navigationView.setNavigationItemSelectedListener(this);
     }
 
@@ -110,8 +126,7 @@ public class NavDrawerActivity extends AppCompatActivity
 
         if (id == R.id.nav_camera) {
             // Handle the camera action
-        }
-        else if
+        } else if
                 (id == R.id.nav_gallery) {
 
         } else if
